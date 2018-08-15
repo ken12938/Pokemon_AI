@@ -1,7 +1,12 @@
+//var privateKey = "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDdQ1zB/elvZFE4JVwL1owUSRDDl4Af48bOTstMfzuzhYp0BYqXP/EQnsvV62cJ4Ciqico5AIdagKVieit/Uk2N8NJkoT9pkbuNjxpbah1MTl++GKm37IubhaGXKX0eN8VTu5LxoXUa1dZXcHXQ0iR3pcowx/0HgkXrm1wyDZpQhXzw8grpRoXIqQDGiJSpIUKdyViaY0j9U3DYhurApin6WTTI5j7dONelG42+DtZE+uSEAiuoKMcc0YUvTWa4KiEL6KHWnp9XjKZdxC6S5BIrRNCsGQyIEPvXVjeTqY9UTtBJlHD5XRZaNmvE/wFlYSjzy2kFIEshiKQ/xNS1J1EvAgMBAAECggEAVKPmIddtqsznPOEduvGRmFjy7r9PpeNOM7F0l4i8X8of0o4kHAO7xa3ZL7XjLqXvKH2ZPAD1xiscGPW/Ge9z924+LXx5c3rqEhbB8GJBXuVEPsXUdqUoKpAN5nNah2qyM3u3lHM9BszyN3SvvPgGNzbWh56ZLnwpHx3JQORvOYmAdHMa1dN+8fNXb4rUR6/zc1B/mIWLXnXDNwZvTF3lXx3ML7ZCocz8WDMV1oS7YYUjwsyrTGt8ARfW8VahuXsmVJw+/6qf9kalXh5wcI2fR2aIK9hU8J+j50Lg+6EouSaZdiY4t8dWv+i6jv6+vV2wM6/+c5yRzD28XABRmHLrAQKBgQD9iOmS5oFlJfFcHiiHDODsxrvmHiEeJWj+SMH9tJyg8TwOc8cRfGRXZNZNhw7anf23govUcBpzIJA9RSwJFsxlmYt88vOyoHG2JuQwlLfXfwzjyICx/7CBDFIuOBl8bryOZFeY/u3hqJr7s4Q9EcCpvJ2lw6PnZWbJjDbwRhLb7wKBgQDfah7mfR6nOkWrcxGm2572iMW7wIUyN0yaVlLMyoysQS7Xz9FH99cdFg/3ot4PzpqaKpGqWWDFSQaliokVFlwJ/s4/6Nvhx6Q5YampaW7J8uIiKxccLA9QYtS8HQbUMg/KSrOStD2X6l4VNcHxcIVWyOS/7lBSvB3YZXNTi+6ewQKBgGQ6H7xHC5gk68ly0qqw2KpB1j4eYxE70MnVkXruT40AULGV63hqKHC0GFQFtEWQd6B4JzcQKiShFuRh2AqvzJXNoWr/0H8pFkrgDQ13fUXfoATcWqQDZI9fg41p+AlM7ZWM7WQ6Q2gV807VpM1Pm05+lgPV15G+cGf02jMaQJJZAoGBANYUqz1zoX7e4Mm0PrLj+gQE9Wy+wyNmR/oQQ9FHOdsJruhPlBvhSnjtnilOIHmHITAfIGvar1b8bekMweS6A0H0rxAggyprklsF0XyrseTD35qcLc3qDlaaDX2gVt3YhrbyM/aczfSXOMYcOBayGqMZZ9DefIt7BSJJvGPPT71BAoGAMY489RHBCCUCkPjwWtNI5fMXGPgK25Yoi4QVbeGUTzu2g5W+z+PPnHC27IkhDISq1HHjyIQeF5DV1vb+7Kfb4eSWOC997EKII3YlOSrwunPaeUZ/VL4ZuxttsnltCY0RWo+MbmgCrHZ9sRETEsWTw5pk4wP4gIG8BZGrhFkgJgI=";
+var id = "gepjalkacmjecjmmcjinikekoffagkgn";
+
 console.log("Reached battle_extract.js");
+
 $("#fsr span").text($("#fsr span").text().replace("Privacy", "WAEIOGHAWOI"));
 
-chrome.storage.local.set({"key": "value"}, function() {
-    console.log('Value is set to ' + "value");
-});
+chrome.runtime.sendMessage(id, {action:"getstorage"}, function(response){
+    console.log("storage is " + response);  
+ });
+
 console.log("Exiting battle_extract.js");

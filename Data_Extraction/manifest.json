@@ -1,7 +1,7 @@
 {
     "name": "Pokemon Showdown Data Extractor",
     "description": "Extract data from Pokemon Showdown battle",
-    "version": "1.0",
+    "version": "1.0.0",
     "manifest_version": 2,
     "content_scripts": [
         {
@@ -10,7 +10,14 @@
         }
     ],
     "web_accessible_resources": ["jquery-3.3.1.min.js", "battle_extract.js"],
+    "externally_connectable": {
+        "matches": ["https://play.pokemonshowdown.com/battle-gen7ou-*", "https://www.google.com/*"]
+    },
     "permissions": [
         "storage"
-    ]
+    ],
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": true
+    }
 }

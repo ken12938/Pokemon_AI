@@ -1,3 +1,12 @@
+// chrome.runtime.onMessage.addListener(function(request, sender, sendResponse) {
+//     console.log("received");
+//     if (request.action != null){
+//         chrome.storage.local.set({"key": "value"}, function() {
+//             console.log('Value is set to ' + "value");
+//         });
+//     }
+//   });
+
 var jqueryScript = document.createElement('script');
 jqueryScript.src = chrome.extension.getURL('jquery-3.3.1.min.js');
 jqueryScript.onload = function() {
